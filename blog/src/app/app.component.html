@@ -1,0 +1,19 @@
+<h1>{{title}}</h1>
+
+<form [formGroup]="loginForms" (ngSubmit)="loginUser()">
+
+<input type="text" placeholder="Enter Name" name="user" formControlName="user">
+<br><br>
+<input type="text" placeholder="Enter password" name="password" formControlName="password">
+<br><br>
+
+
+<button>Login</button>
+
+
+
+
+
+
+
+</form>
