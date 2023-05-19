@@ -2,13 +2,21 @@
 
 <form [formGroup]="loginForms" (ngSubmit)="loginUser()">
 
-<input type="text" placeholder="Enter Name" name="user" formControlName="user">
+<input type="text" placeholder="Enter Name"  formControlName="users">
+<br>
+<span    style="color: red;" *ngIf="user && user.invalid && user.touched">This feild is not Valid</span>
+
+
+
 <br><br>
-<input type="text" placeholder="Enter password" name="password" formControlName="password">
+<input type="password" placeholder="Enter password"  formControlName="password">
+<br>
+<span    style="color: red;" *ngIf="password && password.invalid && password.touched">This feild is not Valid</span>
+
 <br><br>
 
 
-<button>Login</button>
+<button [disabled]="loginForms.invalid">Login</button>
 
 
 
